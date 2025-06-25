@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Paragraphs with ✓</title>
+</head>
+<body>
+
+  <h2>App Features</h2>
+  <div id="features">
+    <p>Fast performance</p>
+    <p>User friendly interface</p>
+    <p>Secure and private</p>
+  </div>
+
+  <button onclick="addCheckMarks()">Add ✓ Prefix</button>
+
+  <script>
+    function addCheckMarks() {
+      const featureDiv = document.getElementById("features");
+      const paragraphs = featureDiv.querySelectorAll("p");
+
+      paragraphs.forEach(p => {
+        if (!p.textContent.startsWith("✓")) {
+          p.textContent = "✓ " + p.textContent;
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

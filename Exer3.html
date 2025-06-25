@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard</title>
+</head>
+<body>
+  <h2>🏆 Leaderboard</h2>
+  <div id="leaderboard-container"></div>
+  <script>
+    const names = ["Grace", "Arpit", "Lokendra", "Satyam"];
+    const ol = document.createElement("ol");
+    names.forEach(name => {
+      const li = document.createElement("li");
+      li.textContent = name;
+      ol.appendChild(li);
+    });
+    const container = document.getElementById("leaderboard-container");
+    container.appendChild(ol);
+  </script>
+</body>
+</html>
